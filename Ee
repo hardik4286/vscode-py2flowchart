@@ -1,0 +1,26 @@
+# Function to calculate income, tax deduction, and superannuation
+def calculate_income(hours_worked, hourly_rate):
+    # Calculate income
+    income = hours_worked * hourly_rate
+    
+    # Calculate income tax (20%)
+    tax = income * 0.2
+    
+    # Calculate superannuation (10%)
+    superannuation = income * 0.1
+    
+    return income, tax, superannuation
+
+# Input from the user
+employee_name = input("Enter employee name: ")
+hours_worked = float(input("Enter hours worked: "))
+hourly_rate = float(input("Enter hourly rate: "))
+
+# Calculate income, tax, and superannuation
+income, tax, superannuation = calculate_income(hours_worked, hourly_rate)
+
+# Display the results
+print("\nEmployee Name:", employee_name)
+print("Income:", income)
+print("Income Tax Deduction:", tax)
+print("Superannuation Deduction:", superannuation)
